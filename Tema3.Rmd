@@ -358,3 +358,12 @@ data(Salaries, package="carData")
         ggplotly(q)
         
 ```
+
+
+```{r}
+#cargamos los datos:
+library(readr)
+owid_covid_data <- read_csv("owid-covid-data.csv")
+
+```
+
