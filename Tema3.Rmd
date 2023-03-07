@@ -367,6 +367,10 @@ library(tidyverse)
 library(plotly)
 owid_covid_data <- read_csv(url("https://covid.ourworldindata.org/data/owid-covid-data.csv"))
 
+#seleccionamos los paises que nos interesan:
+countries <- c("United States", "Italy", "France", "Germany", "Canada", "Japan", "United Kingdom", "Spain")
 
+graf <- owid_covid_data %>% filter(location %in% countries)
+spain <- owid_covid_data %>% filter(location == "Spain")
 ```
 
