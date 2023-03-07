@@ -377,5 +377,7 @@ spain <- owid_covid_data %>% filter(location == "Spain")
 grafico1 <- ggplot(data = graf, aes(x = date, y = new_deaths_smoothed_per_million, color = location)) + geom_line(size = 0.6) + geom_line(data = spain, size = 1, colour = "black") + labs(title = "Nuevas muertes diarias confirmadas por COVID-19 por millón de personas", subtitle = "En el siguiente gráfico se puede observar la comparacion de como ha afectado el Covid-19 entre 
 distintos paises.", caption = "Fuente: Visualiza Grupo K, Universidad de Valencia", x ="" , y="", color =  "Países") + theme_classic() + theme(panel.grid.major.y = element_line(color = "grey",size = 0.1,linetype = 2))
 grafico1
+#Hacemos que el grafico sea interactivo:
+ggplotly(grafico1)
 ```
 
